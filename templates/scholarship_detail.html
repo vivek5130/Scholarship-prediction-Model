@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarship Details</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #4CAF50;
+        }
+
+        .scholarship-info {
+            margin: 20px 0;
+        }
+
+        .scholarship-info p {
+            font-size: 18px;
+            line-height: 1.6;
+        }
+
+        .success-chance {
+            font-size: 20px;
+            color: #fff;
+            background-color: #4CAF50;
+            padding: 10px;
+            border-radius: 5px;
+            margin: 20px 0;
+        }
+
+        .back-btn {
+            display: inline-block;
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #45a049;
+        }
+        header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+
+    </style>
+</head>
+<body>
+    
+    <div class="container">
+        <h1>Scholarship Details</h1>
+
+        <div class="scholarship-info">
+            <h2>{{ scholarship['name'] }}</h2>
+            <p><strong>Description:</strong> {{ scholarship['description'] }}</p>
+        </div>
+
+        <div class="success-chance">
+            <p><strong>Success Chance:</strong> {{ success_chance }}%</p>
+        </div>
+
+        <a href="{{ url_for('home') }}" class="back-btn">Back to Home</a>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,200 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Scholarships</title>
+</head>
+<body>
+    <h1>Available Scholarships</h1>
+    <ul>
+        {% for scholarship in scholarships %}
+            <li><a href="/scholarship/{{ scholarship.id }}">{{ scholarship.name }}</a></li>
+        {% endfor %}
+    </ul>
+    <a href="/apply">Apply for Scholarships</a>
+</body>
+</html> -->
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scholarships Available</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+
+header nav ul {
+    margin: none;
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    top: -25px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.scholarships-section {
+    padding: 40px 0;
+    background-color: #fff;
+}
+
+.scholarships-section h2 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 32px;
+    color: #333;
+}
+h3 a{
+    color: #333;
+    margin-bottom: 40px;
+}
+a{
+    text-decoration: none;
+}
+.scholarships-section h3{
+    text-align: center;
+    margin-bottom: 40px;
+    
+}
+
+.scholarships-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+.scholarship-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scholarship-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.scholarship-card h3 {
+    font-size: 24px;
+    margin-bottom: 15px;
+    color: #2c3e50;
+}
+
+.scholarship-card p {
+    font-size: 16px;
+    color: #7f8c8d;
+    margin-bottom: 20px;
+}
+
+.scholarship-card .learn-more {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 4px;
+    font-weight: bold;
+    margin-top: auto;
+    transition: background-color 0.3s ease;
+}
+
+.scholarship-card .learn-more:hover {
+    background-color: #2980b9;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+    text-align: center;
+}
+
+footer p {
+    font-size: 14px;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Scholarship Portal</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/apply">Apply</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section class="scholarships-section">
+        <div class="container">
+            <h2>Available Scholarships</h2>
+            <!-- <h3><a href="/apply">Apply</a></h3> -->
+            <div class="scholarships-grid">
+                <!-- Loop through scholarships and display them -->
+                {% for scholarship in scholarships %}
+                    <div class="scholarship-card">
+                        <h3>{{ scholarship.name }}</h3>
+                        <p>{{ scholarship.description }}</p>
+                        <a href="/apply" class="learn-more">Apply</a>
+                    </div>
+                {% endfor %}
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 Scholarship Portal. All rights reserved.</p>
+        </div>
+    </footer>
+</body>
+</html>

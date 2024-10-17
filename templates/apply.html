@@ -1,0 +1,249 @@
+<!-- <!DOCTYPE html>
+<html>
+<head>
+    <title>Apply for Scholarship</title>
+</head>
+<body>
+    <h1>Enter Your Details</h1>
+    <form method="POST">
+        10th Percentage: <input type="text" name="10th_percentage"><br>
+        12th Percentage: <input type="text" name="12th_percentage"><br>
+        BTech Percentage: <input type="text" name="btech_percentage"><br>
+        Nationality: 
+        <select name="nationality">
+            <option value="Indian">Indian</option>
+            <option value="Non-Indian">Non-Indian</option>
+        </select><br>
+        Income: <input type="text" name="income"><br>
+        Physically Disabled:
+        <select name="physically_disabled">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+        Extracurricular Activities:
+        <select name="extracurricular">
+            <option value="Yes">Yes</option>
+            <option value="No">No</option>
+        </select><br>
+        Gender:
+        <select name="gender">
+            <option value="Male">Male</option>
+            <option value="Female">Female</option>
+        </select><br>
+        Caste: <input type="text" name="caste"><br>
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html> -->
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apply for Scholarship</title>
+    <style>
+        /* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.form-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.form-title {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #3498db;
+}
+
+.scholarship-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    font-size: 16px;
+    margin-bottom: 5px;
+    display: block;
+    color: #2c3e50;
+}
+
+.form-group input, .form-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: border-color 0.3s ease;
+}
+
+.form-group input:focus, .form-group select:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+.form-actions {
+    text-align: center;
+}
+
+.submit-button {
+    background-color: #3498db;
+    color: #fff;
+    border: none;
+    padding: 12px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.submit-button:hover {
+    background-color: #2980b9;
+}
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 15px 0;
+}
+
+header .logo {
+    font-size: 24px;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+
+header nav ul {
+    margin: none;
+    list-style: none;
+    float: right;
+    margin-right: 20px;
+    position: relative;
+    top: -25px;
+}
+
+header nav ul li {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+header nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 16px;
+}
+@media (max-width: 768px) {
+    .form-container {
+        width: 90%;
+        margin: 20px auto;
+    }
+
+    .form-title {
+        font-size: 24px;
+    }
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1 class="logo">Scholarship Portal</h1>
+            <nav>
+                <ul>
+                    <li><a href="/">Home</a></li>
+                    <li><a href="/apply">Apply</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <div class="form-container">
+        <h1 class="form-title">Apply for Scholarship</h1>
+        <form method="POST" class="scholarship-form">
+            <div class="form-group">
+                <label for="10th_percentage">10th Percentage:</label>
+                <input type="number" id="10th_percentage" name="10th_percentage" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="12th_percentage">12th Percentage:</label>
+                <input type="number" id="12th_percentage" name="12th_percentage" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="btech_percentage">BTech Percentage:</label>
+                <input type="number" id="btech_percentage" name="btech_percentage" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="nationality">Nationality:</label>
+                <select name="nationality" id="nationality" required>
+                    <option value="Indian">Indian</option>
+                    <option value="Non-Indian">Non-Indian</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="income">Income (Annual):</label>
+                <input type="number" id="income" name="income" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="physically_disabled">Physically Disabled:</label>
+                <select name="physically_disabled" id="physically_disabled" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="extracurricular">Extracurricular Activities:</label>
+                <select name="extracurricular" id="extracurricular" required>
+                    <option value="Yes">Yes</option>
+                    <option value="No">No</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="gender">Gender:</label>
+                <select name="gender" id="gender" required>
+                    <option value="Male">Male</option>
+                    <option value="Female">Female</option>
+                </select>
+            </div>
+            
+            <div class="form-group">
+                <label for="caste">Caste (if applicable):</label>
+                <input type="text" id="caste" name="caste">
+            </div>
+            
+            <div class="form-actions">
+                <input type="submit" value="Submit" class="submit-button">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
